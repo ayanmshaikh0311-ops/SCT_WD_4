@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskShedular - To Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">✓ TaskShedular</div>
+      <button id="themeBtn" class="theme-btn">🌙</button>
+    </header>
+
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>My Lists</h2>
+
+        <div id="listContainer"></div>
+
+        <button id="addListBtn" class="add-list-btn">+ Add List</button>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <div class="top-section">
+          <div>
+            <h1 id="listTitle">My Tasks</h1>
+            <p id="taskCount">0 tasks</p>
+          </div>
+
+          <button id="clearCompletedBtn" class="clear-btn">
+            Clear Completed
+          </button>
+        </div>
+
+        <!-- Add Task -->
+        <section class="task-form">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="What needs to be done?"
+          />
+
+          <select id="taskList"></select>
+
+          <input type="datetime-local" id="taskDate" />
+
+          <button id="addTaskBtn">Add Task</button>
+        </section>
+
+        <!-- Filters -->
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+
+          <button class="filter" data-filter="active">Active</button>
+
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Tasks -->
+        <div id="taskContainer"></div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
